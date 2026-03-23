@@ -10,7 +10,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
-    line-height: 1.75;
+    line-height: 1.8;
     color: #1F2937;
     background: #FFFFFF;
     font-size: 15px;
@@ -18,32 +18,38 @@ body {
 }
 
 /* ========================================
-   タイポグラフィ階層
+   タイポグラフィ
    ======================================== */
 
 h1 {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(26px, 4vw, 38px);
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
 }
 
 h2 {
-    font-size: clamp(24px, 3.5vw, 32px);
+    font-size: clamp(22px, 3.5vw, 30px);
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 h3 {
     font-size: clamp(18px, 2.5vw, 22px);
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 h4 {
     font-size: clamp(16px, 2vw, 18px);
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 /* ========================================
@@ -71,7 +77,7 @@ h4 {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #40E0D0;
     letter-spacing: 0.05em;
@@ -86,6 +92,7 @@ h4 {
     text-decoration: none;
     color: #4B5563;
     font-weight: 500;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
@@ -98,18 +105,18 @@ h4 {
    ======================================== */
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 section {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     color: #111827;
 }
 
@@ -124,7 +131,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 150px 2rem 100px;
+    padding: 140px 2rem 80px;
     background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
     position: relative;
 }
@@ -136,8 +143,8 @@ section {
 
 .hero-carousel {
     position: relative;
-    height: 120px;
-    margin-bottom: 3rem;
+    height: 100px;
+    margin-bottom: 2.5rem;
     overflow: hidden;
 }
 
@@ -155,7 +162,7 @@ section {
 }
 
 .carousel-quote {
-    font-size: clamp(16px, 2vw, 19px);
+    font-size: clamp(15px, 1.8vw, 18px);
     font-weight: 600;
     color: #1F2937;
     margin-bottom: 0.5rem;
@@ -172,30 +179,33 @@ section {
 }
 
 .hero-subtitle {
-    font-size: clamp(15px, 1.8vw, 18px);
+    font-size: clamp(14px, 1.6vw, 16px);
     color: #4B5563;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
 }
 
-.badge {
-    display: inline-block;
-    background: #40E0D0;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.85em;
-    margin-left: 0.5rem;
-    font-weight: 600;
+.hero-app-preview {
+    margin-top: 3rem;
 }
 
-.badge-inline {
-    background: #40E0D0;
-    color: white;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.85em;
-    margin: 0 0.25rem;
-    font-weight: 600;
+.app-screenshot-placeholder {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.app-screenshot-placeholder p:first-child {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-note {
+    font-size: 12px;
+    color: #9CA3AF;
 }
 
 .hero-indicators {
@@ -206,10 +216,10 @@ section {
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: #D1D5DB;
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -224,16 +234,15 @@ section {
    ======================================== */
 
 .cta-button {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
     background: #F97316;
     color: white;
-    padding: 1.5rem 3rem;
-    border-radius: 12px;
+    padding: 1.25rem 2.5rem;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
     transition: all 0.3s;
     cursor: pointer;
     border: none;
@@ -241,21 +250,12 @@ section {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.4);
 }
 
 .cta-button.large {
-    padding: 2rem 4rem;
-}
-
-.cta-main {
-    font-size: clamp(16px, 1.8vw, 18px);
-    margin-bottom: 0.5rem;
-}
-
-.cta-sub {
-    font-size: 13px;
-    opacity: 0.9;
+    padding: 1.5rem 3rem;
+    font-size: 17px;
 }
 
 .primary-cta {
@@ -264,48 +264,881 @@ section {
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
     }
     50% {
-        box-shadow: 0 10px 40px rgba(249, 115, 22, 0.5);
+        box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
     }
 }
 
 /* ========================================
-   数値実績セクション
+   こんな悩みありませんか？
    ======================================== */
 
-.stats-section {
+.problem-intro-section {
     background: #FFFFFF;
 }
 
-.stats-grid {
+.problem-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin-bottom: 3rem;
 }
 
-.stat-card {
-    text-align: center;
-    padding: 3rem 2rem;
+.problem-card {
     background: #F9FAFB;
-    border-radius: 16px;
-    transition: all 0.3s;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #E5E7EB;
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.stat-icon {
+.problem-icon {
     font-size: 48px;
     margin-bottom: 1rem;
 }
 
+.problem-card h3 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.problem-card p {
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.problem-message {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.problem-message p {
+    font-size: 17px;
+    color: #1F2937;
+}
+
+.problem-message strong {
+    color: #40E0D0;
+    font-weight: 700;
+}
+
+/* ========================================
+   なぜビジネス英語が話せないのか？
+   ======================================== */
+
+.reason-section {
+    background: #F9FAFB;
+}
+
+.reason-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reason-intro {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 3rem;
+    color: #4B5563;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.reason-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reason-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #40E0D0;
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.reason-item h3 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+}
+
+.reason-desc {
+    color: #4B5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.reason-desc strong {
+    color: #EF4444;
+}
+
+.reason-example {
+    background: #F9FAFB;
+    padding: 1.25rem;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.7;
+}
+
+.reason-comparison {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+}
+
+.reason-comparison h3 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #1F2937;
+}
+
+.comparison-visual {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.comparison-item {
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.comparison-item.old {
+    background: #FEF2F2;
+}
+
+.comparison-item.new {
+    background: #F0FDF4;
+}
+
+.comparison-item h4 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+}
+
+.comparison-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.bar {
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.comparison-result {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.comparison-result.bad {
+    color: #EF4444;
+}
+
+.comparison-result.good {
+    color: #10B981;
+}
+
+.comparison-arrow {
+    font-size: 32px;
+    color: #40E0D0;
+    font-weight: 700;
+}
+
+.reason-conclusion {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #40E0D0;
+}
+
+/* ========================================
+   スピフルの解決策
+   ======================================== */
+
+.solution-section {
+    background: #FFFFFF;
+}
+
+.solution-overview {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.solution-intro {
+    font-size: 16px;
+    color: #4B5563;
+    line-height: 1.9;
+}
+
+.solution-intro strong {
+    color: #40E0D0;
+    font-weight: 700;
+}
+
+/* トレーニングブロック */
+.training-block {
+    background: #F9FAFB;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    border: 2px solid #E5E7EB;
+}
+
+.training-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.training-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.training-badge.input {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.training-badge.output {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.training-badge.ai {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.training-title {
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+}
+
+.training-subtitle {
+    color: #6B7280;
+    font-size: 15px;
+}
+
+.training-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.training-content.reverse {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.training-text h4 {
+    color: #1F2937;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.training-text h4:first-child {
+    margin-top: 0;
+}
+
+.training-text p {
+    color: #4B5563;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.training-text strong {
+    color: #40E0D0;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.feature-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #E5E7EB;
+    color: #4B5563;
+    line-height: 1.7;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list strong {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+.training-example {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.example-label {
+    font-weight: 600;
+    color: #40E0D0;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+.example-box {
+    background: #F9FAFB;
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.example-jp, .example-topic {
+    color: #1F2937;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.example-arrow, .example-instruction {
+    text-align: center;
+    color: #6B7280;
+    font-size: 13px;
+    margin: 0.75rem 0;
+}
+
+.example-en, .example-answer {
+    color: #10B981;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.example-note {
+    color: #6B7280;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* アプリ画面プレースホルダー */
+.app-screenshot {
+    position: sticky;
+    top: 100px;
+}
+
+.screenshot-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #40E0D0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.screenshot-placeholder {
+    background: white;
+    border: 2px dashed #D1D5DB;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screenshot-placeholder p:first-child {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+}
+
+.screenshot-features {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 2;
+    text-align: left;
+}
+
+.screenshot-placeholder.small {
+    min-height: 250px;
+    padding: 2rem 1.5rem;
+}
+
+.screenshot-placeholder.small p {
+    font-size: 13px;
+}
+
+/* AIブロック */
+.ai-block {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+}
+
+.ai-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ai-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.ai-features {
+    margin-top: 2rem;
+}
+
+.ai-feature-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ai-feature-icon {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #10B981;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.ai-feature-content h5 {
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+}
+
+.ai-feature-content p {
+    color: #4B5563;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ai-example {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.ai-before-after {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ai-before, .ai-after {
+    padding: 1.25rem;
+    border-radius: 8px;
+}
+
+.ai-before {
+    background: #FEF2F2;
+}
+
+.ai-after {
+    background: #F0FDF4;
+}
+
+.ai-tag {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 0.75rem;
+}
+
+.ai-before .ai-tag {
+    color: #EF4444;
+}
+
+.ai-after .ai-tag {
+    color: #10B981;
+}
+
+.ai-text-sample {
+    color: #1F2937;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.ai-arrow {
+    text-align: center;
+    color: #6B7280;
+    font-size: 20px;
+}
+
+.ai-feedback {
+    border-top: 1px solid #D1FAE5;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.ai-feedback-item {
+    color: #4B5563;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* 相乗効果セクション（最重要） */
+.synergy-section {
+    background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    margin-top: 4rem;
+}
+
+.synergy-title {
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 2.5rem;
+    font-size: clamp(20px, 3vw, 26px);
+}
+
+.synergy-intro {
+    text-align: center;
+    font-size: 16px;
+    color: #4B5563;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.synergy-intro strong {
+    color: #40E0D0;
+    font-weight: 700;
+}
+
+.synergy-patterns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.synergy-pattern {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.synergy-pattern.bad {
+    border-color: #FEE2E2;
+}
+
+.synergy-pattern.good {
+    border-color: #40E0D0;
+    background: #F0FDFA;
+}
+
+.synergy-pattern h4 {
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+
+.synergy-pattern p {
+    color: #4B5563;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.synergy-pattern.good p strong {
+    color: #40E0D0;
+}
+
+.synergy-visual-cycle {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+}
+
+.synergy-visual-cycle h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1F2937;
+}
+
+.cycle-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cycle-step {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #F9FAFB;
+    border-radius: 10px;
+}
+
+.cycle-number {
+    width: 40px;
+    height: 40px;
+    background: #40E0D0;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.cycle-label {
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.cycle-desc {
+    color: #6B7280;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cycle-arrow {
+    font-size: 24px;
+    color: #40E0D0;
+    font-weight: 700;
+}
+
+.cycle-loop {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: #40E0D0;
+}
+
+/* なぜアプリなのか */
+.app-advantage {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    margin-top: 4rem;
+}
+
+.advantage-title {
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 2.5rem;
+}
+
+.advantage-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #F9FAFB;
+    border-radius: 12px;
+}
+
+.advantage-icon {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.advantage-item h4 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+
+.advantage-item p {
+    color: #4B5563;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.solution-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-message {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ========================================
+   継続できる理由
+   ======================================== */
+
+.retention-section {
+    background: #F9FAFB;
+}
+
+.retention-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.retention-intro p {
+    font-size: 16px;
+    color: #4B5563;
+    line-height: 1.8;
+}
+
+.retention-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.retention-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.retention-icon {
+    font-size: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.retention-item h3 {
+    color: #1F2937;
+    margin-bottom: 1.5rem;
+}
+
+.retention-detail h4 {
+    color: #40E0D0;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 16px;
+}
+
+.retention-detail p {
+    color: #4B5563;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.time-examples {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.time-examples li {
+    padding: 0.75rem 1rem;
+    background: #F9FAFB;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    color: #4B5563;
+    font-size: 14px;
+}
+
+.time-examples strong {
+    color: #1F2937;
+}
+
+.smart-review-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.smart-review-list li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: #4B5563;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.smart-review-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10B981;
+    font-weight: 700;
+}
+
+.retention-note {
+    background: #E0F7FA;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1F2937;
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+.retention-screenshot {
+    margin-top: 1.5rem;
+}
+
+.retention-stat {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.stat-big {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 .stat-number {
-    font-size: clamp(36px, 5vw, 48px);
+    font-size: clamp(48px, 8vw, 72px);
     font-weight: 700;
     color: #40E0D0;
     margin-bottom: 0.5rem;
@@ -323,549 +1156,8 @@ section {
     color: #6B7280;
 }
 
-.stats-source {
-    text-align: center;
-    font-size: 14px;
-    color: #6B7280;
-}
-
 /* ========================================
-   感情的共感セクション
-   ======================================== */
-
-.empathy-section {
-    background: #F9FAFB;
-}
-
-.empathy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.empathy-card {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.empathy-icon {
-    font-size: 64px;
-    margin-bottom: 1rem;
-}
-
-.empathy-card h3 {
-    color: #6B7280;
-    margin-bottom: 1rem;
-    font-size: 16px;
-}
-
-.empathy-card p {
-    color: #4B5563;
-    line-height: 1.8;
-}
-
-.empathy-message {
-    text-align: center;
-    font-size: clamp(16px, 2vw, 19px);
-    font-weight: 600;
-    color: #40E0D0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* ========================================
-   問題の本質セクション
-   ======================================== */
-
-.problem-section {
-    background: #FFFFFF;
-}
-
-.problem-intro {
-    text-align: center;
-    font-size: clamp(16px, 2vw, 19px);
-    color: #EF4444;
-    font-weight: 600;
-    margin-bottom: 4rem;
-}
-
-.comparison-container {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 2rem;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto 4rem;
-}
-
-.comparison-card {
-    background: #F9FAFB;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-}
-
-.comparison-card h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #1F2937;
-}
-
-.comparison-chart {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.chart-bar {
-    padding: 1rem;
-    border-radius: 8px;
-    color: white;
-    font-weight: 600;
-    text-align: center;
-}
-
-.comparison-result {
-    text-align: center;
-    font-weight: 600;
-    color: #6B7280;
-}
-
-.comparison-result.success {
-    color: #10B981;
-}
-
-.comparison-arrow {
-    font-size: 48px;
-    color: #40E0D0;
-    font-weight: 700;
-}
-
-.problem-conclusion {
-    text-align: center;
-    font-size: clamp(16px, 2vw, 19px);
-    color: #1F2937;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.problem-conclusion strong {
-    color: #40E0D0;
-}
-
-/* ========================================
-   科学的根拠セクション
-   ======================================== */
-
-.science-section {
-    background: #F9FAFB;
-}
-
-.science-grid {
-    display: grid;
-    gap: 4rem;
-}
-
-.science-card {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.science-card h3 {
-    color: #1F2937;
-    margin-bottom: 1rem;
-}
-
-.science-author {
-    color: #40E0D0;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.science-text {
-    color: #4B5563;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-.science-cite {
-    font-size: 14px;
-    color: #6B7280;
-    font-style: italic;
-}
-
-.science-brain {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.science-brain h3 {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.brain-areas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.brain-area {
-    text-align: center;
-    padding: 2rem;
-    background: #F9FAFB;
-    border-radius: 12px;
-}
-
-.brain-icon {
-    font-size: 48px;
-    margin-bottom: 1rem;
-}
-
-.brain-area h4 {
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-}
-
-.brain-area p {
-    color: #6B7280;
-    margin-bottom: 0.25rem;
-}
-
-.brain-method {
-    color: #40E0D0;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.brain-note {
-    text-align: center;
-    font-size: 14px;
-    color: #6B7280;
-    line-height: 1.6;
-}
-
-/* ========================================
-   メソッドセクション
-   ======================================== */
-
-.method-section {
-    background: #FFFFFF;
-}
-
-.method-card {
-    position: relative;
-    background: #F9FAFB;
-    padding: 3rem;
-    border-radius: 16px;
-    margin-bottom: 3rem;
-}
-
-.method-number {
-    position: absolute;
-    top: -20px;
-    left: 3rem;
-    background: #40E0D0;
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.method-title {
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-}
-
-.method-subtitle {
-    color: #6B7280;
-    margin-bottom: 2rem;
-}
-
-.method-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.method-text h4 {
-    color: #1F2937;
-    margin-bottom: 1rem;
-}
-
-.method-text ul {
-    list-style: none;
-    padding: 0;
-}
-
-.method-text li {
-    padding: 0.5rem 0;
-    color: #4B5563;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.method-text li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #10B981;
-    font-weight: 700;
-}
-
-.method-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.method-example {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    width: 100%;
-}
-
-.example-label {
-    font-weight: 600;
-    color: #40E0D0;
-    margin-bottom: 1rem;
-}
-
-.example-jp {
-    color: #1F2937;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background: #F9FAFB;
-    border-radius: 8px;
-}
-
-.example-arrow {
-    text-align: center;
-    color: #6B7280;
-    margin: 1rem 0;
-}
-
-.example-en {
-    color: #10B981;
-    font-weight: 500;
-    padding: 1rem;
-    background: #F0FDF4;
-    border-radius: 8px;
-}
-
-.ai-feedback {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    width: 100%;
-}
-
-.feedback-label {
-    font-weight: 600;
-    color: #40E0D0;
-    margin-bottom: 1rem;
-}
-
-.feedback-before,
-.feedback-after {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.feedback-before {
-    background: #FEF2F2;
-}
-
-.feedback-after {
-    background: #F0FDF4;
-}
-
-.feedback-tag {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 0.5rem;
-}
-
-.feedback-before .feedback-tag {
-    color: #EF4444;
-}
-
-.feedback-after .feedback-tag {
-    color: #10B981;
-}
-
-.feedback-before p:last-child,
-.feedback-after p:nth-child(2) {
-    color: #1F2937;
-    font-weight: 500;
-}
-
-.feedback-point {
-    color: #6B7280;
-    font-size: 14px;
-    margin-top: 0.5rem;
-    line-height: 1.6;
-}
-
-.method-cta {
-    text-align: center;
-    margin-top: 4rem;
-}
-
-/* ========================================
-   継続性セクション
-   ======================================== */
-
-.retention-section {
-    background: #F9FAFB;
-}
-
-.retention-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
-}
-
-.retention-card {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.retention-icon {
-    font-size: 64px;
-    margin-bottom: 1rem;
-}
-
-.retention-card h3 {
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-}
-
-.retention-card h4 {
-    color: #40E0D0;
-    margin-bottom: 1rem;
-    font-size: 18px;
-}
-
-.retention-card > p {
-    color: #6B7280;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.retention-examples {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.time-example {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    background: #F9FAFB;
-    border-radius: 8px;
-}
-
-.time-icon {
-    font-size: 24px;
-}
-
-.feedback-visual {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.feedback-badge {
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.feedback-badge.success {
-    background: #D1FAE5;
-    color: #065F46;
-}
-
-.feedback-badge.good {
-    background: #B2EBF2;
-    color: #00ACC1;
-}
-
-.feedback-badge.progress {
-    background: #FEF3C7;
-    color: #92400E;
-}
-
-.streak-visual {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.calendar-mini {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.day {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    background: #F9FAFB;
-}
-
-.day.done {
-    background: #D1FAE5;
-    color: #065F46;
-}
-
-.day.current {
-    background: #B2EBF2;
-    font-size: 20px;
-}
-
-.streak-count {
-    font-weight: 600;
-    color: #EF4444;
-    font-size: 18px;
-}
-
-/* ========================================
-   著名人推薦セクション
+   著名人推薦
    ======================================== */
 
 .endorsement-section {
@@ -874,19 +1166,19 @@ section {
 
 .endorsement-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
 }
 
 .endorsement-card {
     background: #F9FAFB;
-    padding: 3rem 2rem;
-    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
     text-align: center;
 }
 
 .endorsement-image {
-    font-size: 80px;
+    font-size: 64px;
     margin-bottom: 1.5rem;
 }
 
@@ -901,7 +1193,7 @@ section {
 .endorsement-author {
     color: #1F2937;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 0.25rem;
 }
 
@@ -911,7 +1203,7 @@ section {
 }
 
 /* ========================================
-   体験談セクション（タブ形式）
+   体験談
    ======================================== */
 
 .testimonial-section {
@@ -922,16 +1214,16 @@ section {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     flex-wrap: wrap;
 }
 
 .tab-button {
-    padding: 0.875rem 1.75rem;
+    padding: 0.75rem 1.5rem;
     background: white;
     border: 2px solid #E5E7EB;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: #6B7280;
     cursor: pointer;
@@ -976,144 +1268,59 @@ section {
 
 .testimonial-card {
     background: white;
-    padding: 3rem;
-    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-header {
     display: flex;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    align-items: center;
 }
 
 .testimonial-avatar {
-    font-size: 64px;
+    font-size: 56px;
     flex-shrink: 0;
 }
 
 .testimonial-info h3 {
     color: #1F2937;
     margin-bottom: 0.5rem;
+    font-size: 19px;
 }
 
 .testimonial-job {
     color: #6B7280;
     margin-bottom: 0.25rem;
+    font-size: 14px;
 }
 
 .testimonial-period {
     color: #9CA3AF;
-    font-size: 14px;
+    font-size: 13px;
 }
 
-.testimonial-results {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #F9FAFB;
-    border-radius: 12px;
-}
-
-.result-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.result-label {
-    font-size: 14px;
-    color: #6B7280;
-}
-
-.result-value {
-    font-size: 22px;
-    font-weight: 700;
+.testimonial-story h4 {
     color: #40E0D0;
-}
-
-.testimonial-text {
-    color: #4B5563;
-    line-height: 1.8;
-    font-size: 15px;
-}
-
-.testimonial-cta {
-    text-align: center;
-    margin-top: 4rem;
-}
-
-/* ========================================
-   変容後の未来セクション
-   ======================================== */
-
-.transformation-section {
-    background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
-}
-
-.transformation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
-    margin-bottom: 4rem;
-}
-
-.transformation-card {
-    position: relative;
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.transformation-number {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #40E0D0;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
-
-.transformation-icon {
-    font-size: 64px;
-    margin: 1rem 0 1.5rem;
-}
-
-.transformation-card h3 {
-    color: #1F2937;
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 16px;
 }
 
-.transformation-card p {
+.testimonial-story h4:first-child {
+    margin-top: 0;
+}
+
+.testimonial-story p {
     color: #4B5563;
     line-height: 1.8;
-}
-
-.transformation-cta {
-    text-align: center;
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.transformation-cta h3 {
-    color: #1F2937;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* ========================================
-   料金プランセクション
+   料金プラン
    ======================================== */
 
 .pricing-section {
@@ -1122,8 +1329,8 @@ section {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -1131,7 +1338,7 @@ section {
     position: relative;
     background: #F9FAFB;
     padding: 3rem 2rem;
-    border-radius: 16px;
+    border-radius: 12px;
     border: 2px solid #E5E7EB;
     transition: all 0.3s;
 }
@@ -1141,6 +1348,10 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.pricing-card.recommended {
+    border-color: #40E0D0;
+}
+
 .pricing-badge {
     position: absolute;
     top: -15px;
@@ -1148,20 +1359,17 @@ section {
     transform: translateX(-50%);
     background: #EF4444;
     color: white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 14px;
-}
-
-.pricing-badge.recommended {
-    background: #EF4444;
+    font-size: 13px;
 }
 
 .pricing-title {
     text-align: center;
     margin: 1rem 0;
     color: #1F2937;
+    font-size: 20px;
 }
 
 .pricing-discount {
@@ -1172,6 +1380,7 @@ section {
     border-radius: 8px;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    font-size: 14px;
 }
 
 .pricing-amount {
@@ -1180,18 +1389,18 @@ section {
 }
 
 .pricing-yen {
-    font-size: 18px;
+    font-size: 16px;
     color: #6B7280;
 }
 
 .pricing-price {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 700;
     color: #40E0D0;
 }
 
 .pricing-unit {
-    font-size: 18px;
+    font-size: 16px;
     color: #6B7280;
 }
 
@@ -1200,6 +1409,7 @@ section {
     color: #6B7280;
     margin-bottom: 1rem;
     min-height: 1.5rem;
+    font-size: 14px;
 }
 
 .pricing-trial {
@@ -1210,6 +1420,7 @@ section {
     border-radius: 8px;
     font-weight: 600;
     margin-bottom: 2rem;
+    font-size: 14px;
 }
 
 .pricing-features {
@@ -1222,6 +1433,7 @@ section {
     padding: 0.75rem 0;
     color: #4B5563;
     border-bottom: 1px solid #E5E7EB;
+    font-size: 14px;
 }
 
 .pricing-features li:last-child {
@@ -1236,7 +1448,7 @@ section {
     text-align: center;
     text-decoration: none;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
     transition: all 0.3s;
 }
 
@@ -1264,98 +1476,40 @@ section {
 .pricing-note {
     text-align: center;
     color: #6B7280;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* ========================================
-   企業信頼性セクション
-   ======================================== */
-
-.company-section {
-    background: #F9FAFB;
-}
-
-.company-content {
-    display: grid;
-    gap: 3rem;
-}
-
-.company-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-}
-
-.company-stat {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-}
-
-.company-stat-number {
-    font-size: 48px;
-    font-weight: 700;
-    color: #40E0D0;
-    margin-bottom: 0.5rem;
-}
-
-.company-stat-label {
-    color: #4B5563;
-    font-weight: 500;
-}
-
-.company-text {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-}
-
-.company-text h3 {
-    color: #1F2937;
-    margin-bottom: 1rem;
-}
-
-.company-text p {
-    color: #4B5563;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-.company-text p:last-child {
-    margin-bottom: 0;
-}
-
-/* ========================================
-   FAQセクション
+   FAQ
    ======================================== */
 
 .faq-section {
-    background: #FFFFFF;
+    background: #F9FAFB;
 }
 
 .faq-list {
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto;
 }
 
 .faq-item {
-    background: #F9FAFB;
+    background: white;
     margin-bottom: 1rem;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
     width: 100%;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem;
     background: none;
     border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: #1F2937;
     text-align: left;
@@ -1363,11 +1517,11 @@ section {
 }
 
 .faq-question:hover {
-    background: #F3F4F6;
+    background: #F9FAFB;
 }
 
 .faq-icon {
-    font-size: 24px;
+    font-size: 20px;
     color: #40E0D0;
     transition: transform 0.3s;
 }
@@ -1388,24 +1542,14 @@ section {
 }
 
 .faq-answer p {
-    padding: 0 2rem 1.5rem;
+    padding: 0 2rem 1.25rem;
     color: #4B5563;
     line-height: 1.8;
-}
-
-.faq-cta {
-    text-align: center;
-}
-
-.faq-cta p {
-    font-size: 17px;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 1.5rem;
+    font-size: 14px;
 }
 
 /* ========================================
-   最終CTAセクション
+   最終CTA
    ======================================== */
 
 .final-cta-section {
@@ -1419,7 +1563,7 @@ section {
 }
 
 .final-cta-text {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 17px;
     margin-bottom: 2rem;
     opacity: 0.95;
 }
@@ -1427,6 +1571,7 @@ section {
 .final-cta-note {
     margin-top: 2rem;
     opacity: 0.9;
+    font-size: 14px;
 }
 
 /* ========================================
@@ -1436,7 +1581,7 @@ section {
 .footer {
     background: #111827;
     color: white;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
 }
 
 .footer-content {
@@ -1444,7 +1589,7 @@ section {
 }
 
 .footer-logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #40E0D0;
     margin-bottom: 1rem;
@@ -1454,11 +1599,12 @@ section {
 .footer-company {
     color: #9CA3AF;
     margin-bottom: 0.5rem;
+    font-size: 14px;
 }
 
 .footer-copyright {
     color: #6B7280;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* ========================================
@@ -1477,8 +1623,36 @@ section {
 }
 
 /* ========================================
-   レスポンシブデザイン
+   レスポンシブ
    ======================================== */
+
+@media (max-width: 900px) {
+    .training-content,
+    .training-content.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-content {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+
+    .cycle-diagram {
+        flex-direction: column;
+    }
+
+    .cycle-arrow {
+        transform: rotate(90deg);
+    }
+}
 
 @media (max-width: 768px) {
     .nav {
@@ -1486,42 +1660,24 @@ section {
     }
 
     section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .section-title {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
     .hero {
-        padding: 120px 1rem 80px;
+        padding: 120px 1rem 60px;
     }
 
-    .hero-carousel {
-        height: 150px;
-    }
-
-    .comparison-container {
-        grid-template-columns: 1fr;
-    }
-
-    .comparison-arrow {
-        transform: rotate(90deg);
-        font-size: 36px;
-    }
-
-    .method-content {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 0 1rem;
     }
 
     .testimonial-header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-    }
-
-    .testimonial-results {
-        flex-direction: column;
     }
 
     .testimonial-tabs {
@@ -1529,34 +1685,8 @@ section {
     }
 
     .tab-button {
-        padding: 0.75rem 1rem;
-        font-size: 14px;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .cta-button {
-        padding: 1.25rem 2rem;
-    }
-
-    .cta-main {
-        font-size: 16px;
-    }
-
-    .stats-grid {
-        gap: 2rem;
+        padding: 0.6rem 1rem;
+        font-size: 13px;
     }
 
     .pricing-grid {
