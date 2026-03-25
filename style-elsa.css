@@ -84,14 +84,17 @@ body {
    ========================================== */
 .hero {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 100px 0 80px;
-    text-align: center;
+    padding: 120px 0;
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
 .hero-badge {
@@ -106,16 +109,16 @@ body {
 }
 
 .hero-title {
-    font-size: 56px;
+    font-size: 64px;
     font-weight: 900;
-    line-height: 1.3;
+    line-height: 1.2;
     color: #1a1a1a;
     margin-bottom: 32px;
 }
 
 .hero-subtitle {
-    font-size: 22px;
-    line-height: 1.8;
+    font-size: 24px;
+    line-height: 1.7;
     color: #4a4a4a;
     margin-bottom: 48px;
 }
@@ -124,10 +127,10 @@ body {
     display: inline-block;
     background-color: #ff6600;
     color: #ffffff;
-    padding: 20px 56px;
+    padding: 22px 64px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     transition: all 0.3s;
     box-shadow: 0 4px 16px rgba(255, 102, 0, 0.3);
@@ -140,44 +143,47 @@ body {
 }
 
 .hero-app-preview {
-    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .app-screenshot-image {
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
     height: auto;
     border-radius: 24px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================================
    スピフルを一言で表すなら
    ========================================== */
 .oneline-section {
-    background-color: #f8f9fa;
-    padding: 120px 0;
-    text-align: center;
+    background-color: #ffffff;
+    padding: 140px 0;
 }
 
 .oneline-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .oneline-answer {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 900;
-    line-height: 1.5;
-    color: #ff6600;
-    margin-bottom: 60px;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 48px;
 }
 
 .oneline-description {
-    font-size: 20px;
-    line-height: 2;
+    font-size: 22px;
+    line-height: 1.9;
     color: #4a4a4a;
 }
 
@@ -190,11 +196,10 @@ body {
    共通セクションタイトル
    ========================================== */
 .section-title {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 900;
-    line-height: 1.4;
+    line-height: 1.3;
     color: #1a1a1a;
-    text-align: center;
     margin-bottom: 80px;
 }
 
@@ -202,29 +207,31 @@ body {
    お悩みセクション
    ========================================== */
 .problem-section {
-    padding: 120px 0;
-    background-color: #ffffff;
+    padding: 140px 0;
+    background-color: #f8f9fa;
 }
 
 .problem-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 48px;
 }
 
 .problem-card {
-    background-color: #f8f9fa;
-    padding: 48px 40px;
-    border-radius: 16px;
-    transition: transform 0.3s;
+    background-color: #ffffff;
+    padding: 56px 48px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .problem-card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .problem-card h3 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 1.5;
     color: #1a1a1a;
@@ -232,7 +239,7 @@ body {
 }
 
 .problem-card p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
     color: #4a4a4a;
 }
@@ -241,77 +248,76 @@ body {
    なぜ話せないのか？
    ========================================== */
 .reason-section {
-    background-color: #f8f9fa;
-    padding: 120px 0;
+    background-color: #ffffff;
+    padding: 140px 0;
 }
 
 .reason-intro {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.8;
     color: #4a4a4a;
-    text-align: center;
     margin-bottom: 80px;
 }
 
 .reason-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 80px;
     margin-bottom: 80px;
 }
 
 .reason-item {
-    text-align: center;
+    text-align: left;
 }
 
 .reason-number {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     background-color: #ff6600;
     color: #ffffff;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 900;
-    line-height: 80px;
-    border-radius: 50%;
+    line-height: 64px;
+    border-radius: 12px;
     margin-bottom: 32px;
+    text-align: center;
 }
 
 .reason-item h3 {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #1a1a1a;
     margin-bottom: 24px;
 }
 
 .reason-item p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     color: #4a4a4a;
 }
 
 .reason-conclusion {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #ff6600;
-    text-align: center;
 }
 
 /* ==========================================
    スピフルの解決策
    ========================================== */
 .solution-section {
-    padding: 120px 0;
-    background-color: #ffffff;
+    padding: 140px 0;
+    background-color: #f8f9fa;
 }
 
 .solution-intro {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.8;
     color: #4a4a4a;
-    text-align: center;
     margin-bottom: 100px;
+    max-width: 900px;
 }
 
 .solution-intro strong {
@@ -325,7 +331,6 @@ body {
 }
 
 .training-header {
-    text-align: center;
     margin-bottom: 60px;
 }
 
@@ -335,7 +340,7 @@ body {
     border-radius: 50px;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .training-badge.input {
@@ -354,21 +359,21 @@ body {
 }
 
 .training-title {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 900;
     color: #1a1a1a;
     margin-bottom: 16px;
 }
 
 .training-subtitle {
-    font-size: 20px;
-    color: #4a4a4a;
+    font-size: 24px;
+    color: #666;
 }
 
 .training-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 100px;
     align-items: start;
 }
 
@@ -381,11 +386,11 @@ body {
 }
 
 .training-text h4 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 16px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 48px;
 }
 
 .training-text h4:first-child {
@@ -393,10 +398,10 @@ body {
 }
 
 .training-text p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     color: #4a4a4a;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .training-text strong {
@@ -410,11 +415,11 @@ body {
 }
 
 .feature-list li {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.8;
     color: #4a4a4a;
-    margin-bottom: 24px;
-    padding-left: 32px;
+    margin-bottom: 28px;
+    padding-left: 36px;
     position: relative;
 }
 
@@ -424,7 +429,7 @@ body {
     left: 0;
     color: #ff6600;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .feature-list strong {
@@ -434,7 +439,9 @@ body {
 }
 
 .app-screenshot {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* AIブロック */
@@ -443,23 +450,22 @@ body {
 }
 
 .ai-header {
-    text-align: center;
     margin-bottom: 60px;
 }
 
 .ai-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 100px;
     align-items: start;
 }
 
 .ai-text h4 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 16px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 48px;
 }
 
 .ai-text h4:first-child {
@@ -467,10 +473,10 @@ body {
 }
 
 .ai-text p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     color: #4a4a4a;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .ai-text strong {
@@ -484,11 +490,11 @@ body {
 }
 
 .ai-features-list li {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.8;
     color: #4a4a4a;
-    margin-bottom: 16px;
-    padding-left: 32px;
+    margin-bottom: 20px;
+    padding-left: 36px;
     position: relative;
 }
 
@@ -498,41 +504,40 @@ body {
     left: 0;
     color: #ff6600;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* ==========================================
    継続できる理由
    ========================================== */
 .retention-section {
-    background-color: #f8f9fa;
-    padding: 120px 0;
+    background-color: #ffffff;
+    padding: 140px 0;
 }
 
 .retention-intro {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.8;
     color: #4a4a4a;
-    text-align: center;
     margin-bottom: 80px;
 }
 
 .retention-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-bottom: 80px;
+    gap: 48px;
+    margin-bottom: 100px;
 }
 
 .retention-item h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 24px;
 }
 
 .retention-item p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     color: #4a4a4a;
 }
@@ -544,153 +549,162 @@ body {
 
 .retention-stat {
     text-align: center;
-    padding: 60px;
-    background-color: #ffffff;
-    border-radius: 16px;
+    padding: 80px;
+    background-color: #f8f9fa;
+    border-radius: 24px;
 }
 
 .stat-number {
-    font-size: 72px;
+    font-size: 96px;
     font-weight: 900;
     color: #ff6600;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .stat-label {
-    font-size: 20px;
+    font-size: 24px;
     color: #4a4a4a;
+    font-weight: 500;
 }
 
 /* ==========================================
    体験談
    ========================================== */
 .testimonial-section {
-    padding: 120px 0;
-    background-color: #ffffff;
+    padding: 140px 0;
+    background-color: #f8f9fa;
 }
 
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 48px;
 }
 
 .testimonial-card {
-    background-color: #f8f9fa;
-    padding: 40px;
-    border-radius: 16px;
+    background-color: #ffffff;
+    padding: 48px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .testimonial-quote {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.6;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.7;
     color: #1a1a1a;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .testimonial-author {
-    font-size: 16px;
-    color: #4a4a4a;
+    font-size: 17px;
+    color: #666;
 }
 
 /* ==========================================
    料金プラン
    ========================================== */
 .pricing-section {
-    background-color: #f8f9fa;
-    padding: 120px 0;
+    background-color: #ffffff;
+    padding: 140px 0;
 }
 
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-bottom: 40px;
+    gap: 48px;
+    margin-bottom: 48px;
 }
 
 .pricing-card {
-    background-color: #ffffff;
-    padding: 48px 40px;
-    border-radius: 16px;
+    background-color: #f8f9fa;
+    padding: 56px 48px;
+    border-radius: 20px;
     text-align: center;
     position: relative;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .pricing-card.recommended {
     border: 3px solid #ff6600;
+    background-color: #ffffff;
 }
 
 .pricing-badge {
     position: absolute;
-    top: -16px;
+    top: -18px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ff6600;
     color: #ffffff;
-    padding: 8px 24px;
+    padding: 10px 28px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
 }
 
 .pricing-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .pricing-discount {
     display: inline-block;
     background-color: #fff3e0;
     color: #f57c00;
-    padding: 4px 16px;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 6px 20px;
+    border-radius: 6px;
+    font-size: 15px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .pricing-amount {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .pricing-label {
-    font-size: 16px;
-    color: #4a4a4a;
+    font-size: 18px;
+    color: #666;
     margin-right: 8px;
 }
 
 .pricing-price {
-    font-size: 56px;
+    font-size: 64px;
     font-weight: 900;
     color: #1a1a1a;
 }
 
 .pricing-unit {
-    font-size: 18px;
-    color: #4a4a4a;
+    font-size: 20px;
+    color: #666;
     margin-left: 4px;
 }
 
 .pricing-total {
-    font-size: 16px;
-    color: #4a4a4a;
-    margin-bottom: 24px;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 28px;
 }
 
 .pricing-button {
     display: block;
     width: 100%;
-    padding: 18px;
+    padding: 22px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     transition: all 0.3s;
-    margin-top: 32px;
+    margin-top: 40px;
 }
 
 .pricing-button.primary {
@@ -703,18 +717,18 @@ body {
 }
 
 .pricing-button.secondary {
-    background-color: #f8f9fa;
+    background-color: #e0e0e0;
     color: #1a1a1a;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #cccccc;
 }
 
 .pricing-button.secondary:hover {
-    background-color: #e8e9ea;
+    background-color: #d0d0d0;
 }
 
 .pricing-note {
-    font-size: 16px;
-    color: #4a4a4a;
+    font-size: 17px;
+    color: #666;
     text-align: center;
 }
 
@@ -723,29 +737,29 @@ body {
    ========================================== */
 .final-cta-section {
     background: linear-gradient(135deg, #ff6600 0%, #ff8833 100%);
-    padding: 120px 0;
+    padding: 140px 0;
     text-align: center;
     color: #ffffff;
 }
 
 .final-cta-title {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 900;
-    line-height: 1.4;
+    line-height: 1.3;
     color: #ffffff;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
 .final-cta-text {
-    font-size: 22px;
-    line-height: 1.8;
+    font-size: 26px;
+    line-height: 1.7;
     color: #ffffff;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 }
 
 .cta-button.large {
-    font-size: 24px;
-    padding: 24px 64px;
+    font-size: 26px;
+    padding: 26px 72px;
     background-color: #ffffff;
     color: #ff6600;
 }
@@ -809,6 +823,11 @@ body {
 
     .hero {
         padding: 60px 0 40px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .hero-title {
