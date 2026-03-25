@@ -97,7 +97,7 @@ h5 {
 }
 
 .nav a:hover {
-    color: #40E0D0;
+    color: #FF6600;
 }
 
 /* ========================================
@@ -316,9 +316,28 @@ section {
     border-color: #FFD9B3;
 }
 
-.problem-icon {
-    font-size: 64px;
-    margin-bottom: 1.5rem;
+.problem-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FFE4CC 0%, #FFF5EB 100%);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.problem-card:hover .problem-icon-wrapper {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #FFD9B3 0%, #FFE4CC 100%);
+}
+
+.problem-icon-svg {
+    width: 40px;
+    height: 40px;
+    color: #FF6600;
+    stroke-width: 2;
 }
 
 .problem-card h3 {
@@ -345,7 +364,7 @@ section {
 }
 
 .problem-message strong {
-    color: #40E0D0;
+    color: #008B8B;
     font-weight: 700;
 }
 
@@ -493,7 +512,7 @@ section {
 
 .comparison-arrow {
     font-size: 32px;
-    color: #40E0D0;
+    color: #008B8B;
     font-weight: 700;
 }
 
@@ -501,7 +520,7 @@ section {
     text-align: center;
     font-size: 18px;
     font-weight: 600;
-    color: #40E0D0;
+    color: #008B8B;
 }
 
 /* ========================================
@@ -525,17 +544,24 @@ section {
 }
 
 .solution-intro strong {
-    color: #40E0D0;
+    color: #008B8B;
     font-weight: 700;
 }
 
 /* トレーニングブロック */
 .training-block {
-    background: #F9FAFB;
-    padding: 3rem 2.5rem;
-    border-radius: 16px;
+    background: #FFFFFF;
+    padding: 3.5rem 3rem;
+    border-radius: 20px;
     margin-bottom: 3rem;
-    border: 2px solid #E5E7EB;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
+}
+
+.training-block:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
 
 .training-header {
@@ -605,7 +631,7 @@ section {
 }
 
 .training-text strong {
-    color: #40E0D0;
+    color: #008B8B;
 }
 
 .feature-list {
@@ -639,7 +665,7 @@ section {
 
 .example-label {
     font-weight: 600;
-    color: #40E0D0;
+    color: #008B8B;
     margin-bottom: 1rem;
     font-size: 14px;
 }
@@ -693,7 +719,7 @@ section {
 .screenshot-label {
     font-size: 14px;
     font-weight: 600;
-    color: #40E0D0;
+    color: #008B8B;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -735,10 +761,12 @@ section {
 
 /* AIブロック */
 .ai-block {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    padding: 3rem 2.5rem;
-    border-radius: 16px;
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+    padding: 3.5rem 3rem;
+    border-radius: 20px;
     margin-bottom: 3rem;
+    border: 1px solid #FDBA74;
+    box-shadow: 0 4px 16px rgba(251, 146, 60, 0.08);
 }
 
 .ai-header {
@@ -876,7 +904,7 @@ section {
 }
 
 .synergy-intro strong {
-    color: #40E0D0;
+    color: #008B8B;
     font-weight: 700;
 }
 
@@ -899,7 +927,7 @@ section {
 }
 
 .synergy-pattern.good {
-    border-color: #40E0D0;
+    border-color: #008B8B;
     background: #F0FDFA;
 }
 
@@ -915,7 +943,7 @@ section {
 }
 
 .synergy-pattern.good p strong {
-    color: #40E0D0;
+    color: #008B8B;
 }
 
 .synergy-visual-cycle {
@@ -976,7 +1004,7 @@ section {
 
 .cycle-arrow {
     font-size: 24px;
-    color: #40E0D0;
+    color: #008B8B;
     font-weight: 700;
 }
 
@@ -985,7 +1013,7 @@ section {
     margin-top: 2rem;
     font-size: 15px;
     font-weight: 600;
-    color: #40E0D0;
+    color: #008B8B;
 }
 
 /* なぜアプリなのか */
@@ -1088,7 +1116,7 @@ section {
 }
 
 .retention-detail h4 {
-    color: #40E0D0;
+    color: #008B8B;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     font-size: 16px;
@@ -1172,7 +1200,7 @@ section {
 .stat-number {
     font-size: clamp(48px, 8vw, 72px);
     font-weight: 700;
-    color: #40E0D0;
+    color: #008B8B;
     margin-bottom: 0.5rem;
 }
 
@@ -1263,13 +1291,13 @@ section {
 }
 
 .tab-button:hover {
-    border-color: #40E0D0;
-    color: #40E0D0;
+    border-color: #008B8B;
+    color: #008B8B;
 }
 
 .tab-button.active {
     background: #40E0D0;
-    border-color: #40E0D0;
+    border-color: #008B8B;
     color: white;
 }
 
@@ -1335,7 +1363,7 @@ section {
 }
 
 .testimonial-story h4 {
-    color: #40E0D0;
+    color: #008B8B;
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 16px;
@@ -1381,7 +1409,7 @@ section {
 }
 
 .pricing-card.recommended {
-    border-color: #40E0D0;
+    border-color: #008B8B;
 }
 
 .pricing-badge {
@@ -1428,7 +1456,7 @@ section {
 .pricing-price {
     font-size: 44px;
     font-weight: 700;
-    color: #40E0D0;
+    color: #008B8B;
 }
 
 .pricing-unit {
@@ -1496,7 +1524,7 @@ section {
 
 .pricing-button.secondary {
     background: white;
-    color: #40E0D0;
+    color: #008B8B;
     border: 2px solid #40E0D0;
 }
 
@@ -1554,7 +1582,7 @@ section {
 
 .faq-icon {
     font-size: 20px;
-    color: #40E0D0;
+    color: #008B8B;
     transition: transform 0.3s;
 }
 
@@ -1623,7 +1651,7 @@ section {
 .footer-logo {
     font-size: 24px;
     font-weight: 700;
-    color: #40E0D0;
+    color: #008B8B;
     margin-bottom: 1rem;
     letter-spacing: 0.05em;
 }
