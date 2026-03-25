@@ -773,7 +773,7 @@ body {
    蛍光ペン風ハイライト
    ========================================== */
 .highlight {
-    background: linear-gradient(transparent 60%, rgba(25, 118, 210, 0.4) 60%);
+    background: linear-gradient(transparent 60%, rgba(77, 208, 225, 0.5) 60%);
     padding: 0 4px;
     font-weight: 900;
 }
