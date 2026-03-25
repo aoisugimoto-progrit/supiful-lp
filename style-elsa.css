@@ -557,12 +557,8 @@ body {
 .stat-number {
     font-size: 96px;
     font-weight: 900;
-    background-color: #0d47a1;
-    color: #ffffff;
-    padding: 16px 48px;
-    border-radius: 12px;
+    color: #ff6600;
     margin-bottom: 24px;
-    display: inline-block;
 }
 
 .stat-label {
@@ -780,16 +776,6 @@ body {
     background: linear-gradient(transparent 60%, rgba(77, 208, 225, 0.5) 60%);
     padding: 0 4px;
     font-weight: 900;
-}
-
-/* 白抜き強調（濃い青背景＋白文字） */
-.badge-text-strong {
-    background-color: #0d47a1;
-    color: #ffffff;
-    padding: 4px 16px;
-    border-radius: 6px;
-    font-weight: 900;
-    display: inline-block;
 }
 
 /* ==========================================
